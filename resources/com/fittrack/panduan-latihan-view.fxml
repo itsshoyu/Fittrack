@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="400.0" styleClass="background" stylesheets="@main-style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fittrack.controller.PanduanLatihanController">
+   
+   <top>
+      <Button mnemonicParsing="false" onAction="#keHalamanDashboard" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER_LEFT">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <BorderPane.alignment>
+            <Pos fx:constant="TOP_LEFT" />
+         </BorderPane.alignment>
+      </Button>
+   </top>
+   
+   <center>
+      <VBox alignment="TOP_CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="84.0" prefWidth="221.0" text="Panduan Latihan">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <TilePane alignment="CENTER" hgap="15.0" prefColumns="2" prefHeight="438.0" prefWidth="400.0" vgap="15.0">
+               <children>
+                  <Button onAction="#showExerciseList" prefHeight="120.0" prefWidth="150.0" style="-fx-background-color: #08d9d6; -fx-text-fill: black;" text="Kardio" userData="KARDIO" />
+                  <Button onAction="#showExerciseList" prefHeight="120.0" prefWidth="150.0" style="-fx-background-color: #08d9d6; -fx-text-fill: black;" text="Kekuatan" userData="KEKUATAN" />
+                  <Button onAction="#showExerciseList" prefHeight="120.0" prefWidth="150.0" style="-fx-background-color: #08d9d6; -fx-text-fill: black;" text="HIIT" userData="HIIT" />
+                  <Button onAction="#showExerciseList" prefHeight="120.0" prefWidth="150.0" style="-fx-background-color: #08d9d6; -fx-text-fill: black;" text="Kekuatan Kaki" userData="KAKI" />
+                  <Button onAction="#showExerciseList" prefHeight="120.0" prefWidth="150.0" style="-fx-background-color: #08d9d6; -fx-text-fill: black;" text="Fleksibilitas" userData="FLEKSIBILITAS" />
+               </children>
+            </TilePane>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </VBox>
+   </center>
+   <bottom>
+      <BorderPane prefWidth="337.0">
+         <bottom>
+            <ImageView fitHeight="60.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="BOTTOM_RIGHT">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" right="20.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </bottom>
+      </BorderPane>
+   </bottom>
+</BorderPane>

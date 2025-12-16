@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.fittrack/com.fittrack.App",
+            "projectName": "fittrack"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.fittrack/com.fittrack.App",
+            "projectName": "FitTrack-main_89cdf48d"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.fittrack.App",
+            "projectName": "FitTrack-main_89cdf48d"
+        },
+        {
+            "type": "java",
+            "vmArgs": [
+                "--module-path",
+                "D:\\download 2\\javafx-sdk-21.0.7\\lib",
+                "--add-modules",
+                "javafx.controls,javafx.fxml,javafx.graphics"
+            ]
+        }
+    ]
+}

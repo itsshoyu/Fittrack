@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700.0" prefWidth="400.0" styleClass="background" stylesheets="@main-style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fittrack.controller.DashboardController">
+   <top>
+      <VBox styleClass="header-pane">
+         <children>
+            <Button onAction="#onLogoutClick" styleClass="logout-button">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label styleClass="header-subtitle" text="Selamat Datang Kembali," />
+            <Label fx:id="usernameLabel" styleClass="header-title" text="Username" />
+            <Label fx:id="kaloriHariIniLabel" styleClass="header-text-bold" text="0 / 2000 kkal" />
+            <ProgressBar fx:id="calorieProgressBar" progress="0.0" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="25.0" right="25.0" top="10.0" />
+         </padding>
+      </VBox>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" spacing="20.0">
+         <children>
+            <VBox onMouseClicked="#onSaranLatihanClick" styleClass="saran-latihan-box">
+               <children>
+                  <Label styleClass="saran-title" text="Saran Latihan Hari Ini" />
+                  <Label fx:id="saranLatihanLabel" styleClass="saran-text" text="Memuat latihan..." />
+               </children>
+            </VBox>
+            <GridPane alignment="CENTER" hgap="15.0" prefHeight="277.0" prefWidth="350.0" vgap="15.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               
+               <children>
+                  <Button contentDisplay="TOP" onAction="#keHalamanKalori" styleClass="menu-button" text="Pencatat Kalori" GridPane.halignment="CENTER">
+                     <graphic><ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@images/calories.png" /></image></ImageView></graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" onAction="#keHalamanBmi" styleClass="menu-button" text="Kalkulator IMT" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <graphic><ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@images/bmi.png" /></image></ImageView></graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" onAction="#keHalamanPanduan" styleClass="menu-button" text="Panduan Latihan" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <graphic><ImageView fitHeight="42.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@images/workout.png" /></image></ImageView></graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" onAction="#keHalamanGrafik" styleClass="menu-button" text="Laporan &amp; Grafik" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <graphic><ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true"><image><Image url="@images/chart.png" /></image></ImageView></graphic>
+                  </Button>
+               </children>
+              </GridPane>
+         </children>
+         <padding>
+            <Insets left="25.0" right="25.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+   <bottom>
+      <BorderPane prefWidth="337.0">
+         <right>
+            <ImageView fitHeight="60.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets right="10.0" top="50.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </right>
+         <center>
+            <Button contentDisplay="TOP" onAction="#keHalamanTarget" styleClass="menu-button" text="Atur Target Kalori" BorderPane.alignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/target.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="70.0" />
+               </BorderPane.margin>
+            </Button>
+         </center>
+      </BorderPane>
+   </bottom>
+</BorderPane>

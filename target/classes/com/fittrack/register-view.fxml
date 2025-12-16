@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700.0" prefWidth="400.0" styleClass="background" stylesheets="@main-style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fittrack.controller.RegisterController">
+   <top>
+      <Button mnemonicParsing="false" onAction="#keHalamanLanding" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER_LEFT">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <BorderPane.margin>
+            <Insets left="10.0" top="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </top>
+   <center>
+      <VBox alignment="CENTER" spacing="25.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </ImageView>
+            
+            <TextField fx:id="usernameField" alignment="CENTER" maxWidth="300.0" promptText="username" styleClass="login-field" />
+            <PasswordField fx:id="passwordField" alignment="CENTER" maxWidth="300.0" promptText="password" styleClass="login-field" />
+            <PasswordField fx:id="confirmPasswordField" alignment="CENTER" maxWidth="300.0" promptText="konfirmasi password" styleClass="login-field" />
+            
+            <Button fx:id="daftarButton" defaultButton="true" onAction="#onDaftarClick" prefHeight="30.0" prefWidth="135.0" styleClass="primary-button" text="DAFTAR">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            
+            <Label text="Sudah punya akun?">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Button onAction="#keHalamanLogin" styleClass="link-button" text="Sign in disini" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,37 @@
+/* Mengatur latar belakang utama */
+.root-pane {
+  -fx-background-color: #1c1c1e;
+  -fx-background-image: url("images/landing.png");
+  -fx-background-size: 600 900;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center;
+}
+
+/* Gaya untuk tombol Log In (latar transparan dengan border) */
+.login-button {
+  -fx-background-color: transparent;
+  -fx-text-fill: white;
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-background-radius: 25;
+  -fx-border-color: white;
+  -fx-border-width: 2px;
+  -fx-border-radius: 25;
+  -fx-pref-height: 50px;
+}
+
+/* Gaya untuk tombol Sign Up (latar warna solid) */
+.signup-button {
+  -fx-background-color: #08d9d6; /* Warna aksen Anda */
+  -fx-text-fill: black;
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-background-radius: 25;
+  -fx-pref-height: 50px;
+}
+
+/* Gaya untuk label "or" */
+.or-label {
+  -fx-text-fill: white;
+  -fx-font-size: 14px;
+}
